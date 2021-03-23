@@ -1,7 +1,12 @@
+//todo: so basically what im gonna do next is add the questions. what im gonna do is make variables for each restaurant and they're basically gonna get scores. If her answer would support going to one place, it's score goes up, while saying something that wouldn't support going to that place would decrease it's score. at the end we're gonna have a list of them basically and then display them in order from highest rated to lowest rated based off of her answers.
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include <string.>
+
+void listCLose();
+void printHeart();
+void endMessage();
+void lineHashBreak();
 
 int main(void)
 {
@@ -11,25 +16,41 @@ int main(void)
     lineHashBreak();
     //printing a heart and the welcome message
 
-    int distanceNum = 0;
+    int n;
     printf("To start, let's pick a range. Do you want to get something close, a little ways away, or \nsomething a little further? (Number 1-3)\n1 - Something close(We could even walk to some of these!)\n2 - Something a little ways a way (Maybe we could doordash for some of these!)\n3 - Something a bit further than that. (These may be too far to doordash, so most likely we're gonna have to drive and eat there or pick it up)\n");
-    do{
-        scanf("So, what number will it be: %d", &distanceNum);
+    do
+    {
+        printf("Type your number here:");
+        scanf("%d", &n);
+        
     }
-    while (distanceNum < 1 || distanceNum > 3);
+    while (n < 1 || n > 3);
    
-    if (distanceNum == 1)
+    if (n == 1)
     {
+        lineHashBreak();
+        printf("You have chosen to eat close. The options for that, based off of your own choices are as follows: \n \n");
         listClose();
+        lineHashBreak();
+        printf("Are you sure you would like to continue this process knowing that these are the choices for that distance? \n1 for yes 0 for no:");
+        int rightChoice;
+        scanf("%d", &rightChoice);
+        lineHashBreak();
+        if (rightChoice == 1)
+        {
+            printf("Alright, now that we have your choice for range correctly determined, we can proceed to \nget a better feeling of what you're in the mood for. We're going to ask questions that assess your preference \nfor things like price, sweet/savory, hot/cold, how easy to get, how possibly upsetting for the stomach, etc.\n");
+        }
+        
     }
-    else
-    {
-        printf("Testing worked!");
+    else{
+        printf("well that's not either not ready yet or you typed in the wrong number.\n");
     }
+    
+    printf("your number was %d \n", n);
     endMessage();
 }
 
-int printHeart(void){
+void printHeart(){
     printf("  ##   ##  \n");
     printf(" #  # #  # \n");
     printf("#    #    #\n");
@@ -40,7 +61,7 @@ int printHeart(void){
     printf("     #\n");
 }
 
-int listClose(void){
+void listClose(){
     char restListClose[12][15] = {
                 "panera",
                 "luna grill",
@@ -64,7 +85,7 @@ int listClose(void){
         while (loopNumber <= 11);
 }
 
-int endMessage(void){
+void endMessage(){
     printf("###############################################################################\n");
     printf("#                                                                             #\n");
     printf("#   ##################      ##                  #     #################       #\n");
@@ -88,10 +109,11 @@ int endMessage(void){
     //Just a graphical way of saying "Hey renny, it's over now."
 
     printf("Press ENTER key to exit this program Ms. Lady. But DON'T lie to Nick about the results. No matter what you\nchose, he'll be happy with it. And again, his preferences have already been taken into consideration and\nis in the root of all this math.\n");  
+    
     getchar();  
 }
 
-int lineHashBreak(void){
+void lineHashBreak(){
     printf("                                                                                                                          \n");
     printf("##########################################################################################################################\n");
     printf("                                                                                                                          \n");
