@@ -47,6 +47,7 @@ int main(void)
     }
     
     printf("your number was %d \n", n);
+    printf("\n");
     endMessage();
 }
 
@@ -77,7 +78,7 @@ void listClose(){
                 "starbucks"
             };
         int loopNumber = 0;
-        do
+        do  
         {
             printf("%s \n", restListClose[loopNumber]);
             loopNumber++;
