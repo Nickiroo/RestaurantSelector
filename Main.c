@@ -5,10 +5,15 @@
 
 
 void listCLose();
+//listClose will list the close restaurant options
 void printHeart();
+//This will print a heart
 void endMessage();
+//ending message and prompt to close
 void lineHashBreak();
+//a line break followed by a line of hashes and another line break
 void questioningClose();
+//questions for the close restaurants to assign scores for each
 
 int main(void)
 {
@@ -31,7 +36,7 @@ int main(void)
     if (n == 1)
     {
         lineHashBreak();
-        printf("You have chosen to eat close. The options for that, based off of your own choices are as follows: \n \n");
+        printf("You have chosen to eat close. The options for that, based off of your own choices, are as follows: \n \n");
         listClose();
         lineHashBreak();
         printf("Are you sure you would like to continue this process knowing that these are the choices for that distance? \n1 for yes 0 for no:");
@@ -41,6 +46,8 @@ int main(void)
         if (rightChoice == 1)
         {
             printf("Alright, now that we have your choice for range correctly determined, we can proceed to \nget a better feeling of what you're in the mood for. We're going to ask questions that assess your preference \nfor things like price, sweet/savory, hot/cold, how easy to get, how possibly upsetting for the stomach, etc.\n");
+            lineHashBreak();
+            questioningClose();
         }
         
     }
@@ -48,9 +55,7 @@ int main(void)
         printf("well that's not either not ready yet or you typed in the wrong number.\n");
     }
     
-    printf("your number was %d \n", n);
     lineHashBreak();
-    questioningClose();
     lineHashBreak();
     printf("\n");
     endMessage();
@@ -92,31 +97,32 @@ void listClose(){
 }
 
 void endMessage(){
-    printf("###############################################################################\n");
-    printf("#                                                                             #\n");
-    printf("#   ##################      ##                  #     #################       #\n");
-    printf("#   #                       ###                 #     #               ####    #\n");
-    printf("#   #                       #  #                #     #               ####    #\n");
-    printf("#   #                       #   #               #     #               ####    #\n");
-    printf("#   #                       #    #              #     #               ####    #\n");
-    printf("#   #                       #     #             #     #               ####    #\n");
-    printf("#   #                       #      #            #     #               ####    #\n");
-    printf("#   #                       #       #           #     #               ####    #\n");
-    printf("#   ##################      #        #          #     #               ####    #\n");
-    printf("#   #                       #         ##        #     #               ####    #\n");
-    printf("#   #                       #           #       #     #               ####    #\n");
-    printf("#   #                       #            #      #     #               ####    #\n");
-    printf("#   #                       #             #     #     #               ####    #\n");
-    printf("#   #                       #              #    #     #               ####    #\n");
-    printf("#   #                       #               #   #     #               ####    #\n");
-    printf("#   #                       #                #  #     #               ####    #\n");
-    printf("#   ##################      #                 ###     #################       #\n");
-    printf("###############################################################################\n");
+    printf("###################################################################################\n");
+    printf("#                                                                                 #\n");
+    printf("#     ##################      ##                  #     #################         #\n");
+    printf("#     #                       ###                 #     #               ####      #\n");
+    printf("#     #                       #  #                #     #               ####      #\n");
+    printf("#     #                       #   #               #     #               ####      #\n");
+    printf("#     #                       #    #              #     #               ####      #\n");
+    printf("#     #                       #     #             #     #               ####      #\n");
+    printf("#     #                       #      #            #     #               ####      #\n");
+    printf("#     #                       #       #           #     #               ####      #\n");
+    printf("#     ##################      #        #          #     #               ####      #\n");
+    printf("#     #                       #         ##        #     #               ####      #\n");
+    printf("#     #                       #           #       #     #               ####      #\n");
+    printf("#     #                       #            #      #     #               ####      #\n");
+    printf("#     #                       #             #     #     #               ####      #\n");
+    printf("#     #                       #              #    #     #               ####      #\n");
+    printf("#     #                       #               #   #     #               ####      #\n");
+    printf("#     #                       #                #  #     #               ####      #\n");
+    printf("#     ##################      #                 ###     #################         #\n");
+    printf("#                                                                                 #\n");
+    printf("###################################################################################\n");
     //Just a graphical way of saying "Hey renny, it's over now."
 
-    printf("Press ENTER key to exit this program Ms. Lady. But DON'T lie to Nick about the results. No matter what you\nchose, he'll be happy with it. And again, his preferences have already been taken into consideration and\nis in the root of all this math.\n");  
-    
-    getchar();  
+    printf("Press any number and then the ENTER key to exit this program Ms. Lady. But DON'T lie to Nick about the results. No matter what you\nchose, he'll be happy with it. And again, his preferences have already been taken into consideration and\nis in the root of all this math.\n");  
+    int temp;
+    scanf("%d", &temp);  
 }
 
 void lineHashBreak(){
