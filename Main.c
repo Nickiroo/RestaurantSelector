@@ -131,17 +131,17 @@ void lineHashBreak(){
     printf("                                                                                                                          \n");
 }
 
-void questioningClose(){
+void questioningClose(){ 
     
-    int scorePanera = 4;
-    int scoreLunag = 3.5;
-    int scoreSubway = 3;
-    int scoreChipotle = 2.5;
-    int scoreBoardb = 2;
-    int scoreOtoto = 2;
-    int scoreCowboy = 1.5;
-    int scoreGorgai = 1;
-    int scoreLosprim = .5;
+    int scorePanera = 0;
+    int scoreLunag = 0;
+    int scoreSubway = 0;
+    int scoreChipotle = 0;
+    int scoreBoardb = 0;
+    int scoreOtoto = 0;
+    int scoreCowboy = 0;
+    int scoreGorgai = 0;
+    int scoreLosprim = 0;
     int scoreFlippin = 0;
     int scoreBlounge = 0;
     int scoreStarb = 0;
